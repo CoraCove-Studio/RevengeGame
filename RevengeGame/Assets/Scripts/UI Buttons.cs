@@ -34,7 +34,7 @@ public class UIButtons : MonoBehaviour
     IEnumerator PlayButtonClick()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("LevelOne");
+        SceneManager.LoadScene("Loading Screen");
     }
 
     IEnumerator OptionsButtonClick()
