@@ -8,26 +8,56 @@ public class UIButtons : MonoBehaviour
 {
    public void OnPlayButtonClick()
     {
-        SceneManager.LoadScene("LevelOne");
+        StartCoroutine(PlayButtonClick());
     }
 
     public void OnOptionsButtonClick()
     {
-        SceneManager.LoadScene("Options Screen");
+        StartCoroutine(OptionsButtonClick());
     }
 
     public void OnCreditsButtonClick()
     {
-        SceneManager.LoadScene("Credits");
+        StartCoroutine(CreditButtonClick());
     }
 
     public void OnQuitGameClick()
     {
-        Application.Quit();
+        StartCoroutine(QuitButtonClick());
     }
 
     public void OnMenuClick()
     {
+        StartCoroutine(MenuButtonClick());
+    }
+
+    IEnumerator PlayButtonClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("LevelOne");
+    }
+
+    IEnumerator OptionsButtonClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Options Screen");
+    }
+
+    IEnumerator MenuButtonClick()
+    {
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("MainMenu");
+    }
+
+    IEnumerator CreditButtonClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Credits");
+    }
+
+    IEnumerator QuitButtonClick()
+    {
+        yield return new WaitForSeconds(1);
+        Application.Quit();
     }
 }
