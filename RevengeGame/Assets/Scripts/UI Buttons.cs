@@ -25,4 +25,9 @@ public class UIButtons : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void OnMenuClick()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
