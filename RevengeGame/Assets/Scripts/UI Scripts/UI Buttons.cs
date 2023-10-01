@@ -31,6 +31,11 @@ public class UIButtons : MonoBehaviour
         StartCoroutine(MenuButtonClick());
     }
 
+    public void TempClick()
+    {
+        StartCoroutine(TempButtonClick());
+    }
+
     IEnumerator PlayButtonClick()
     {
         yield return new WaitForSeconds(1);
@@ -59,5 +64,11 @@ public class UIButtons : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         Application.Quit();
+    }
+
+    IEnumerator TempButtonClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("TempHelpScene");
     }
 }

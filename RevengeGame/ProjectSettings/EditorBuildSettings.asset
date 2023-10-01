@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelThree.unity
     guid: 53c820018c076954da1f23ed8191fa1d
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/TempHelpScene.unity
+    guid: 4614886c83ea8e447b3e05591819fbf6
   m_configObjects: {}
