@@ -1203,7 +1203,7 @@ Transform:
   m_GameObject: {fileID: 841507525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1610, y: 150, z: 430}
+  m_LocalPosition: {x: 2343, y: 150, z: -430}
   m_LocalScale: {x: 500, y: 500, z: 500}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1698,52 +1698,6 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
---- !u!1 &1261639162
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1261639164}
-  - component: {fileID: 1261639163}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1261639163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261639162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eadb776b9e4cfa247a9530fbfc6a48cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClips: []
-  audioSource: {fileID: 0}
---- !u!4 &1261639164
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261639162}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 958.97894, y: 543.33936, z: -1040.5663}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267051241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 422.00018, y: 54.87091}
+  m_AnchoredPosition: {x: 422.00024, y: 54.87085}
   m_SizeDelta: {x: 1920, y: 269}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373801026
@@ -3348,6 +3302,5 @@ SceneRoots:
   - {fileID: 1854167544}
   - {fileID: 841507529}
   - {fileID: 4758679966382084691}
-  - {fileID: 1261639164}
   - {fileID: 206270858}
   - {fileID: 1583445216}
