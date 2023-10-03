@@ -1621,7 +1621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -31}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072637463
@@ -1644,7 +1644,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Darnell \n\nRachel\n\nCasey \n\nNick"
+  m_text: 'Darnell - UI Programmer, Level Designer
+
+
+    Rachel - Gameplay Designer,
+    Artist
+
+
+    Casey - Gameplay Designer, Programmer
+
+
+    Nick - 3d Modeler'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b1f445cc8fcda048a04e8336fb101e6, type: 2}
   m_sharedMaterial: {fileID: -4905530433470309915, guid: 6b1f445cc8fcda048a04e8336fb101e6,
@@ -1708,7 +1718,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -337.836, y: -233.76562, z: -330.3606, w: -260.83887}
+  m_margin: {x: -681.3913, y: -261.951, z: -748.45325, w: -165.55557}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
