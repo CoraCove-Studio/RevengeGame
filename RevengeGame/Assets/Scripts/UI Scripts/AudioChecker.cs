@@ -21,5 +21,13 @@ public class AudioChecker : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if (currentScene.name == "Loading Screen 2")
+        {
+            Destroy(gameObject);
+        }
+        else if(currentScene.name == "Loading Screen 1")
+        {
+            Destroy(gameObject);
+        }
     }
 }

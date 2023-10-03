@@ -17,7 +17,7 @@ public class LoadingScreenLVL2 : MonoBehaviour
 
     IEnumerator LoadAsyncScene()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("LevelThree");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("MoonMercenary");
         asyncLoad.allowSceneActivation = false;
         while (!asyncLoad.isDone)
         {
