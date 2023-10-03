@@ -6,9 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class UIButtons : MonoBehaviour
 {
-   public void OnPlayButtonClick()
+    public Image black;
+    public Animator anim;
+
+    public void OnPlayButtonClick()
     {
         StartCoroutine(PlayButtonClick());
+    }
+
+    public void OnPlayTwoButtonClick()
+    {
+        StartCoroutine(LevelTwoButtonClick());
+    }
+
+    public void OnPlayThreeButtonClick()
+    {
+        StartCoroutine(LevelThreeButtonClick());
     }
 
     public void OnOptionsButtonClick()
@@ -36,9 +49,25 @@ public class UIButtons : MonoBehaviour
         StartCoroutine(TempButtonClick());
     }
 
+    public void OnLevelOpSelectorClick()
+    {
+        StartCoroutine(LevelOpButtonClick());
+    }
+
+    public void OnLevelOptionsClick()
+    {
+        StartCoroutine(OptionsTwoButtonClick());
+    }
+
+    public void OnLevelSelectorClick()
+    {
+        StartCoroutine(LevelButtonClick());
+    }
+
     IEnumerator PlayButtonClick()
     {
-        yield return new WaitForSeconds(1);
+        anim.SetBool("Fade", true);
+        yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Loading Screen");
     }
 
@@ -70,5 +99,37 @@ public class UIButtons : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("TempHelpScene");
+    }
+
+    IEnumerator LevelOpButtonClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Level Select");
+    }
+
+    IEnumerator OptionsTwoButtonClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("LevelSOptions");
+    }
+
+    IEnumerator LevelButtonClick()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Loading Selection");
+    }
+
+    IEnumerator LevelThreeButtonClick()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene("Loading Screen 2");
+    }
+
+    IEnumerator LevelTwoButtonClick()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene("Loading Screen 1");
     }
 }

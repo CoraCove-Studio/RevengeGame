@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips: []
-  audioSource: {fileID: 1874875036}
+  audioSource: {fileID: 1805232163}
   theMixer: {fileID: 24100000, guid: 2cf7acb083d305f4dbe9421b4d6fbab8, type: 2}
 --- !u!4 &1390401313
 Transform:
@@ -243,8 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4effb64ad940345b02aae78a42bb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Track1: {fileID: 1874875036}
-  Track2: {fileID: 1805232163}
+  Track1: {fileID: 1805232163}
+  Track2: {fileID: 1874875036}
   Track3: {fileID: 1603264665}
   TrackSelector: 0
   TrackHistory: 0
@@ -535,7 +535,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5665966649127754005, guid: 2cf7acb083d305f4dbe9421b4d6fbab8,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: c4d3a400540e0ca4d9d7ec37a47f6087, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

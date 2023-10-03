@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scenes/MainMenu.unity
     guid: 676ecad450656d945a07f25b12984dac
   - enabled: 1
-    path: Assets/Scenes/Menu Scenes/Options Screen.unity
+    path: Assets/Scenes/Menu Scenes/Option Screen/Options Screen.unity
     guid: 1ba25fc412b292444835a54169b0c9b2
   - enabled: 1
     path: Assets/Scenes/Menu Scenes/Credits.unity
     guid: 0474898a4fc3cdd49af6e27074a1d463
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Level Select.unity
+    guid: 437056bf7dc8ebd4fb461a729ff826b9
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Mission Lobby/CoffeBrawl.unity
+    guid: fae0293c858a3e34e8ac63f8b94aa8cf
   - enabled: 1
     path: Assets/Scenes/LoadingScree/Loading Screen.unity
     guid: b925e3b4cd2fef944b223691b0edea8e
@@ -24,11 +30,17 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelOne.unity
     guid: 871e910e9d907814091ad156b8330edb
   - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Mission Lobby/Level2.unity
+    guid: e2fc7492a2905bd47ba63cd7ad0e9ffa
+  - enabled: 1
     path: Assets/Scenes/LoadingScree/Loading Screen 1.unity
     guid: 21d589d0f1edbf8498d43d03cc43612a
   - enabled: 1
     path: Assets/Scenes/LevelTwo.unity
     guid: 2c1bb30909af19c4d9786c1738c847fe
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/Mission Lobby/Moon Mercenary.unity
+    guid: e2a935e03946fed478da826a836d6d26
   - enabled: 1
     path: Assets/Scenes/LoadingScree/Loading Screen 2.unity
     guid: 041de92e8bca74447b8f641725b3e57c
