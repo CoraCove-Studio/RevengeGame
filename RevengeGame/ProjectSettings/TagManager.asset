@@ -8,6 +8,8 @@ TagManager:
   - Music Stop
   - LeftArm
   - LeftLeg
+  - TrackingObject
+  - audio_Music
   layers:
   - Default
   - TransparentFX

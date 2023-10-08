@@ -8,6 +8,7 @@ public class UIButtons : MonoBehaviour
 {
     public Image black;
     public Animator anim;
+    public int secondsToZero = 2;
 
     public void OnPlayButtonClick()
     {
@@ -66,6 +67,7 @@ public class UIButtons : MonoBehaviour
 
     IEnumerator PlayButtonClick()
     {
+        StartCoroutine(findAudioAndFadeOut());
         anim.SetBool("Fade", true);
         yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Loading Screen");
@@ -121,6 +123,7 @@ public class UIButtons : MonoBehaviour
 
     IEnumerator LevelThreeButtonClick()
     {
+        StartCoroutine(findAudioAndFadeOut());
         anim.SetBool("Fade", true);
         yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Loading Screen 2");
@@ -128,8 +131,31 @@ public class UIButtons : MonoBehaviour
 
     IEnumerator LevelTwoButtonClick()
     {
+        StartCoroutine(findAudioAndFadeOut());
         anim.SetBool("Fade", true);
         yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Loading Screen 1");
+    }
+
+    IEnumerator findAudioAndFadeOut()
+    {
+        // Find Audio Music in scene
+        AudioSource audioMusic = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+
+        // Check Music Volume and Fade Out
+        while (audioMusic.volume > 0.2f)
+        {
+            audioMusic.volume -= Time.deltaTime / secondsToZero;
+            yield return null;
+        }
+
+        // Make sure volume is set to 0
+        audioMusic.volume = 0;
+
+        // Stop Music
+        audioMusic.Stop();
+
+        // Destroy
+        Destroy(this);
     }
 }
