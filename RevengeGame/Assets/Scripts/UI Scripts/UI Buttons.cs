@@ -8,7 +8,7 @@ public class UIButtons : MonoBehaviour
 {
     public Image black;
     public Animator anim;
-    public int secondsToZero = 2;
+    public int secondsToZero = 5;
 
     public void OnPlayButtonClick()
     {
