@@ -48,10 +48,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  dmgPopUpPrefab: {fileID: 4685640887810665954, guid: a24d2ab086c68ce46852138f456d8d5c,
+    type: 3}
 --- !u!1 &2780806674009147278
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,10 +102,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  dmgPopUpPrefab: {fileID: 4685640887810665954, guid: a24d2ab086c68ce46852138f456d8d5c,
+    type: 3}
 --- !u!1 &4028646112403387562
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,10 +156,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  dmgPopUpPrefab: {fileID: 4685640887810665954, guid: a24d2ab086c68ce46852138f456d8d5c,
+    type: 3}
 --- !u!1 &4134648589864638725
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  randomDmg: 1
+  randomHeal: 1
   is_Player: 1
 --- !u!1 &4290075403750343695
 GameObject:
@@ -331,10 +339,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 1
   is_Enemy: 0
   hit_FX_Prefab: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  dmgPopUpPrefab: {fileID: 4685640887810665954, guid: a24d2ab086c68ce46852138f456d8d5c,
+    type: 3}
 --- !u!1001 &4343346031128650454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -488,3 +498,4 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 2780806674009147278}
   left_Leg_Attack_Point: {fileID: 4290075403750343695}
   right_Leg_Attack_Point: {fileID: 4028646112403387562}
+  stand_Up_Timer: 0
