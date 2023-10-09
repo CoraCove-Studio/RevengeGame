@@ -4,17 +4,24 @@ using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
     public GameObject dialogueBox;
-    public TMP_Text dialogueName;
-    public TMP_Text dialogueContent;
+    private TMP_Text dialogueName;
+    private TMP_Text dialogueContent;
+    public GameObject dialoguePrompt;
 
     private string[] dialogueList;
     private int arrayPos = 0;
 
+    private string documentPath;
+    private string currentEvent;
     private string currentDialogue;
+
     private bool midDialogue = false;
 
     private Coroutine co; // Fun (terrible) fact: Unity is EVIL INCARNATE and will only stop coroutines if they're stopped in the same exact fashion they're started. See: https://discussions.unity.com/t/how-to-stop-a-co-routine-in-c-instantly/49118/4
@@ -22,11 +29,28 @@ public class Dialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dialogueBox = GameObject.Find("DialogueBox");
+        dialogueBox = transform.GetChild(0).gameObject;
         dialogueName = dialogueBox.transform.GetChild(0).GetComponent<TMP_Text>(); // The name of the character speaking.
         dialogueContent = dialogueBox.transform.GetChild(1).GetComponent<TMP_Text>(); // The dialogue being said.
+        dialoguePrompt = transform.GetChild(1).gameObject;
 
-        GetDialogueList("Other/Level01-Dialogue");
+        string currentLevel = SceneManager.GetActiveScene().name;
+        switch (currentLevel)
+        {
+            case "LevelThree":
+                documentPath = "Other/Level01-Dialogue";
+                break;
+            case "LevelTwo":
+                documentPath = "Other/Level01-Dialogue";
+                break;
+            case "LevelOne":
+                documentPath = "Other/Level01-Dialogue";
+                break;
+            default:
+                documentPath = "Other/Level01-Dialogue";
+                break;
+        }
+        GetDialogueList(documentPath);
         StartDialogue();
     }
 
@@ -56,6 +80,7 @@ public class Dialogue : MonoBehaviour
     public void StartDialogue() // Iniates or progresses dialogue. Will automatically close dialogue box if reached end of dialogue.
     {
         Time.timeScale = 0f;
+        if (dialoguePrompt.activeSelf) { dialoguePrompt.SetActive(false); }
         if (!dialogueBox.activeSelf) { dialogueBox.SetActive(true); } // Shows the dialogue box if not already displayed.
         try
         {
@@ -77,6 +102,7 @@ public class Dialogue : MonoBehaviour
         {
             dialogueBox.SetActive(false);
             Time.timeScale = 1f;
+            arrayPos = 0;
         }
     }
 

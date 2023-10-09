@@ -10,6 +10,8 @@ TagManager:
   - LeftLeg
   - TrackingObject
   - audio_Music
+  - Actors
+  - CanTalkTo
   layers:
   - Default
   - TransparentFX

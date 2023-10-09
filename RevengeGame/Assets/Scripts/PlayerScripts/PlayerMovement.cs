@@ -16,13 +16,17 @@ public class PlayerMovement : MonoBehaviour
     private float rotation_Y = -90f;
     private float rotation_Speed = 15f;
 
-
+    private Dialogue dialogueScript;
+    private DialogueEvent infoScript;
+    private GameObject eventParticipant;
+    public bool dialoguePrompt = false;
 
     // Start is called before the first frame update
     void Awake()
     {
         myBody = GetComponent<Rigidbody>();
         player_Anim = GetComponentInChildren<CharacterAnimation>();
+        dialogueScript = GameObject.Find("DialogueUI").GetComponent<Dialogue>();
     }
 
     // Update is called once per frame
@@ -30,6 +34,12 @@ public class PlayerMovement : MonoBehaviour
     {
         RotatePlayer();
         AnimatePlayerWalk();
+        if (Input.GetKeyDown(KeyCode.E) && dialoguePrompt) // Starts dialogue from in-game prompt.
+        {
+            if (!infoScript.repeat) { eventParticipant.tag = "Untagged"; } // If the particular dialogue event doesn't repeat, remove the "CanTalkTo" tag.
+            dialoguePrompt = false; // Isn't made false in Dialogue script later, necessary to avoid StartDialogue() being called twice on key down.
+            dialogueScript.StartDialogue(); // infoScript.eventName
+        }
     }
 
     private void FixedUpdate()
@@ -72,5 +82,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("CanTalkTo"))
+        {
+            eventParticipant = other.gameObject; // The object with the "CanTalkTo" tag, referenced in Update().
+            infoScript = other.gameObject.GetComponent<DialogueEvent>();
+            dialoguePrompt = true;
+            dialogueScript.dialoguePrompt.SetActive(true); // Prompts the player to start dialogue.
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        dialoguePrompt = false;
+        if (other.CompareTag("CanTalkTo")) { dialogueScript.dialoguePrompt.SetActive(false); }
+    }
 }
 
