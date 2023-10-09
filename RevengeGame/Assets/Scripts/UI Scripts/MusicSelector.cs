@@ -9,6 +9,7 @@ public class MusicSelector : MonoBehaviour
     public AudioSource Track3;
     public int TrackSelector;
     public int TrackHistory;
+    public int secondsToZero = 5;
 
 
     void Start()
@@ -55,5 +56,32 @@ public class MusicSelector : MonoBehaviour
                 TrackHistory = 3;
             }
         }
+    }
+
+    public void MusicStop()
+    {
+        StartCoroutine(findAudioAndFadeOut());
+    }
+
+    IEnumerator findAudioAndFadeOut()
+    {
+        // Find Audio Music in scene
+        AudioSource audioMusic = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+
+        // Check Music Volume and Fade Out
+        while (audioMusic.volume > 0.1f)
+        {
+            audioMusic.volume -= Time.deltaTime / secondsToZero;
+            yield return null;
+        }
+
+        // Make sure volume is set to 0
+        audioMusic.volume = 0;
+
+        // Stop Music
+        audioMusic.Stop();
+
+        // Destroy
+        Destroy(this);
     }
 }
