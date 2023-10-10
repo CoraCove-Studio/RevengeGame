@@ -8,7 +8,7 @@ public class UIButtons : MonoBehaviour
 {
     public Image black;
     public Animator anim;
-    public MusicSelector musicSelectorComp; 
+    public MusicEnd musicSelectorComp; 
 
     public void OnPlayButtonClick()
     {

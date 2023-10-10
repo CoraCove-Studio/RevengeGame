@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class MusicSelector : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class MusicSelector : MonoBehaviour
     public AudioSource Track3;
     public int TrackSelector;
     public int TrackHistory;
-    public int secondsToZero = 5;
+    //public int secondsToZero = 5;
 
 
     void Start()
@@ -58,6 +59,7 @@ public class MusicSelector : MonoBehaviour
         }
     }
 
+    /*
     public void MusicStop()
     {
         StartCoroutine(findAudioAndFadeOut());
@@ -66,7 +68,8 @@ public class MusicSelector : MonoBehaviour
     IEnumerator findAudioAndFadeOut()
     {
         // Find Audio Music in scene
-        AudioSource audioMusic = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+        AudioSource audioMusic = GameObject.FindGameObjectWithTag("MainMenuMusic").GetComponent<AudioSource>();
+        GetComponent<AudioSource>().clip = audioMusic.clip;
 
         // Check Music Volume and Fade Out
         while (audioMusic.volume > 0.1f)
@@ -84,4 +87,5 @@ public class MusicSelector : MonoBehaviour
         // Destroy
         Destroy(this);
     }
+    */
 }
