@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class AnimationTags
 {
@@ -16,6 +17,7 @@ public class AnimationTags
     public const string ATTACK_1_TRIGGER = "Attack1";
     public const string ATTACK_2_TRIGGER = "Attack2";
     public const string ATTACK_3_TRIGGER = "Attack3";
+    public const string ATTACK_4_TRIGGER = "Attack4";
 
     public const string IDLE_ANIMATION = "Idle";
 
