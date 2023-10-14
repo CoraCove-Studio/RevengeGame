@@ -216,15 +216,15 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1382784489}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 100
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: -30
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1126043517}
         m_TargetAssemblyTypeName: OptionsScreen, Assembly-CSharp
-        m_MethodName: SetMusicVolume
+        m_MethodName: SetSFXVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1974091700}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 100
+  m_MaxValue: 20
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -2214,9 +2214,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 541369155}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 100
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: -0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

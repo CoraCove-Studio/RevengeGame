@@ -19,7 +19,7 @@ public class MusicEnd : MonoBehaviour
         GetComponent<AudioSource>().clip = audioMusic.clip;
 
         // Check Music Volume and Fade Out
-        while (audioMusic.volume > 0.1f)
+        while (audioMusic.volume > 0.01f)
         {
             audioMusic.volume -= Time.deltaTime / secondsToZero;
             yield return null;
