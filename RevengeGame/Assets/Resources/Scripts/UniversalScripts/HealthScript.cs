@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,13 +38,16 @@ public class HealthScript : MonoBehaviour
 
     public void ApplyDamage(float damage, bool knockDown)
     {
+        bool isCrit = false;
         if (characterDied)
         {
             return;
         }
         else
         {
+            if (Random.Range(1, 6) == 1) { isCrit = true; }
             if (randomDmg) { damage = Random.Range(damage * 0.75f, (damage * 1.25f) + 1); }
+            if (isCrit) { damage *= 2; }
             if (is_Player && !invincible)
             {
                 health -= (int)damage;
@@ -79,6 +83,7 @@ public class HealthScript : MonoBehaviour
 
         if (!is_Player)
         {
+            if (isCrit) { currentDmgPopUp.transform.GetChild(0).GetComponent<TMP_Text>().color = Color.yellow; }
             currentDmgPopUp.transform.GetChild(0).GetComponent<TMP_Text>().text = ((int)damage).ToString();
 
             if (knockDown)
@@ -102,8 +107,16 @@ public class HealthScript : MonoBehaviour
     // Entity becomes temporarily invincible when hit.
     IEnumerator Invincible()
     {
-        //invincible = true;
-        yield return new WaitForSeconds(2.0f);
+        invincible = true;
+        Image fill = healthBar.transform.GetChild(1).GetChild(0).GetComponent<Image>();
+        Color originalColor = fill.color;
+        for (var i = 0; i < 5; i++)
+        {
+            fill.color = Color.white;
+            yield return new WaitForSeconds(0.1f);
+            fill.color = originalColor;
+            yield return new WaitForSeconds(0.1f);
+        }
         // Play animation here?
         invincible = false;
     }
