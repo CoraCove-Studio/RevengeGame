@@ -1,11 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using System;
-using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour

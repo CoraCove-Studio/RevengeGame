@@ -256,7 +256,6 @@ RectTransform:
   - {fileID: 1319710068}
   - {fileID: 1267051242}
   - {fileID: 487686685}
-  - {fileID: 1224430920}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -493,7 +492,7 @@ GameObject:
   - component: {fileID: 487686687}
   - component: {fileID: 487686686}
   m_Layer: 5
-  m_Name: Game Title (1)
+  m_Name: DLC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2005,103 +2004,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179962618}
   m_CullTransparentMesh: 1
---- !u!1 &1224430919
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1224430920}
-  - component: {fileID: 1224430922}
-  - component: {fileID: 1224430921}
-  - component: {fileID: 1224430923}
-  m_Layer: 5
-  m_Name: Ticker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1224430920
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224430919}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 172676547}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.24000001}
-  m_AnchorMax: {x: 1, y: 0.33900002}
-  m_AnchoredPosition: {x: 398.83115, y: 25.508484}
-  m_SizeDelta: {x: -1072.573, y: -35.274597}
-  m_Pivot: {x: 0.5, y: 0}
---- !u!114 &1224430921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224430919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1224430922
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224430919}
-  m_CullTransparentMesh: 1
---- !u!114 &1224430923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224430919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6335590170b69d4cbc8123e958b41d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tickerItemPrefab: {fileID: 5461216062134414668, guid: 1a10256d767417c4f9d9ce14cc23d7d3,
-    type: 3}
-  itemDuration: 10
-  fillerItems:
-  - NEW DLC COMING SOON!
-  - VINCIBLE DLC AVAILABLE SEPT 31!
-  - MULTIPLAYER AVAILABLE NOW ONLY ON PS2!
-  - PRE-ORDER VINCIBLE DLC TODAY!
-  - ARE YOU READY FOR REVENGE!
 --- !u!1001 &1230837371
 PrefabInstance:
   m_ObjectHideFlags: 0
