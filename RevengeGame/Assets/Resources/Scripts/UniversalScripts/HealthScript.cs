@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
     public int health = 100;
     private GameObject dmgPopUp;
+    private Slider healthBar;
+    private GameObject healthBarBlink;
     private bool invincible = false;
 
     public bool randomDmg = true;
@@ -24,6 +27,8 @@ public class HealthScript : MonoBehaviour
     private void Awake()
     {
         animationScript = GetComponentInChildren<CharacterAnimation>();
+        healthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
+        healthBarBlink = GameObject.Find("InvincibilityFill");
     }
 
     public void ApplyDamage(float damage, bool knockDown)
@@ -33,7 +38,15 @@ public class HealthScript : MonoBehaviour
             return;
         }
         if (randomDmg) { damage = Random.Range(damage * 0.75f, (damage * 1.25f) + 1); }
-        if (!invincible) { health -= (int)damage; }
+        if (!invincible)
+        {
+            health -= (int)damage;
+            if (is_Player)
+            {
+                healthBar.value = health;
+                StartCoroutine(Invincible());
+            }
+        }
 
         //display health ui
 
@@ -86,7 +99,7 @@ public class HealthScript : MonoBehaviour
     // Entity becomes temporarily invincible when hit.
     IEnumerator Invincible()
     {
-        //invincible = true;
+        invincible = true;
         yield return new WaitForSeconds(2.0f);
         // Play animation here?
         invincible = false;
