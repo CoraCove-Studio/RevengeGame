@@ -34,13 +34,18 @@ public class PauseManager : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        foreach (Transform child in gameObject.transform) { if (child.gameObject.name != "PauseMenu") { child.gameObject.SetActive(false); } }
     }
 
     public void ResumeGame()
     {
-        pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        foreach (Transform child in gameObject.transform)
+        {
+            if (child.gameObject.name != "PauseMenu") { child.gameObject.SetActive(true); }
+            else { child.gameObject.SetActive(false); }
+        }
     }
 
     public void GoToMainMenu()
