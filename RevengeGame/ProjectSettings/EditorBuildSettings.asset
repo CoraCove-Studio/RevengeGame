@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LoadingScree/Loading Screen 2.unity
     guid: 041de92e8bca74447b8f641725b3e57c
   - enabled: 1
-    path: Assets/Scenes/Levels/MoonMercenary.unity
+    path: Assets/Scenes/Levels/LevelThree.unity
     guid: 502f5e14dfad34c44b2102d699dd5450
   - enabled: 1
     path: Assets/Scenes/Menu Scenes/TempHelpScene.unity
