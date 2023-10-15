@@ -32,7 +32,7 @@ public class HealthScript : MonoBehaviour
         healthBarBlink = GameObject.Find("InvincibilityFill");
         if (!is_Player)
         {
-            health = 50;
+            health = 100;
         }
     }
 
@@ -70,11 +70,14 @@ public class HealthScript : MonoBehaviour
             }
             else
             {
+                LevelTransitions lvlScript = GameObject.Find("InGameUI").GetComponent<LevelTransitions>();
+                lvlScript.enemiesDefeated++;
+                gameObject.tag = "Untagged";
                 Behaviour moveScript = gameObject.GetComponent<EnemyMovement>();
                 moveScript.enabled = false; // Needs to be disabled, otherwise enemy refuses to die.
-                CapsuleCollider collider = gameObject.GetComponent<CapsuleCollider>();
+                Component[] colliders = gameObject.GetComponentsInChildren<Collider>();
+                foreach (var collider in colliders) { Destroy(collider); }
                 Destroy(gameObject.GetComponent<Rigidbody>());
-                Destroy(collider);
                 //collider.excludeLayers = LayerMask.GetMask("Player"); // Stops the player from being able to collide with enemies on death.
             }
 

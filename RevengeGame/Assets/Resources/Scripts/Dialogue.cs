@@ -38,17 +38,17 @@ public class Dialogue : MonoBehaviour
                 documentPath = "Other/Level01-Dialogue";
                 break;
             case "LevelTwo":
-                documentPath = "Other/Level01-Dialogue";
+                documentPath = "Other/Level02-Dialogue";
                 break;
             case "LevelOne":
-                documentPath = "Other/Level01-Dialogue";
+                documentPath = "Other/Level03-Dialogue";
                 break;
             default:
                 documentPath = "Other/Level01-Dialogue";
                 break;
         }
         GetDialogueList(documentPath);
-        StartDialogue();
+        //StartDialogue();
     }
 
     // Update is called once per frame
