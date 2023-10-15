@@ -78,7 +78,6 @@ public class HealthScript : MonoBehaviour
                 Component[] colliders = gameObject.GetComponentsInChildren<Collider>();
                 foreach (var collider in colliders) { Destroy(collider); }
                 Destroy(gameObject.GetComponent<Rigidbody>());
-                //collider.excludeLayers = LayerMask.GetMask("Player"); // Stops the player from being able to collide with enemies on death.
             }
 
             return;
