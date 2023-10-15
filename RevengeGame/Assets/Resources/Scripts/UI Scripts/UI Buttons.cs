@@ -123,6 +123,7 @@ public class UIButtons : MonoBehaviour
 
     IEnumerator LevelThreeButtonClick()
     {
+        musicSelectorComp.MusicStop();
         anim.SetBool("Fade", true);
         yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Loading Screen 2");
@@ -130,6 +131,7 @@ public class UIButtons : MonoBehaviour
 
     IEnumerator LevelTwoButtonClick()
     {
+        musicSelectorComp.MusicStop();
         anim.SetBool("Fade", true);
         yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Loading Screen 1");
