@@ -13,9 +13,26 @@ public class CharacterAnimationDelegate : MonoBehaviour
 
     private CharacterAnimation animationScript;
 
+    private AudioSource audioSource;
+
+    [SerializeField] private AudioClip whoosh_Sound, fall_Sound, ground_Hit_Sound, dead_Sound;
+
+    private EnemyMovement enemy_Movement;
+
+    private ShakeCamera shakeCamera;
+
     private void Awake()
     {
         animationScript = GetComponent<CharacterAnimation>();
+
+        audioSource = GetComponent<AudioSource>();
+
+        if (gameObject.CompareTag(Tags.ENEMY_TAG))
+        {
+            enemy_Movement = GetComponentInParent<EnemyMovement>();
+        }
+
+        shakeCamera = GameObject.FindWithTag(Tags.MAIN_CAMERA_TAG).GetComponent<ShakeCamera>();
     }
 
     void Left_Arm_Attack_On()
@@ -98,5 +115,54 @@ public class CharacterAnimationDelegate : MonoBehaviour
     {
         yield return new WaitForSeconds(stand_Up_Timer);
         animationScript.StandUp();
+    }
+
+    public void Attack_FX_Sound()
+    {
+        audioSource.volume = 0.2f;
+        audioSource.clip = whoosh_Sound;
+        audioSource.Play();
+    }
+
+    public void CharacterDiedSound()
+    {
+        audioSource.volume = 1;
+        audioSource.clip = dead_Sound;
+        audioSource.Play();
+    }
+
+    public void Enemy_KnockedDown()
+    {
+        audioSource.volume = .5f;
+        audioSource.clip = fall_Sound;
+        audioSource.Play();
+    }
+
+    public void Enemy_HitGround()
+    {
+        audioSource.volume = .5f;
+        audioSource.clip = ground_Hit_Sound;
+        audioSource.Play();
+    }
+
+    private void DisableMovement()
+    {
+        enemy_Movement.enabled = false;
+
+        //set the enemy parent to default layer where the collisions hit
+        transform.parent.gameObject.layer = 0;
+    }
+
+    private void EnableMovement()
+    {
+        enemy_Movement.enabled = true;
+
+        //set the enemy parent to enemy layer where the collisions hit
+        transform.parent.gameObject.layer = 8;
+    }
+
+    private void ShakeCameraOnFall()
+    {
+        shakeCamera.ShouldShake = true;
     }
 }

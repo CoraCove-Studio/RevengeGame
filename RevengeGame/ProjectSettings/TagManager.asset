@@ -12,6 +12,7 @@ TagManager:
   - audio_Music
   - Actors
   - CanTalkTo
+  - Enemy
   layers:
   - Default
   - TransparentFX
