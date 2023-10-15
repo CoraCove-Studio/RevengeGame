@@ -59,7 +59,8 @@ public class AttackUniversal : MonoBehaviour
 
                 Instantiate(hit_FX_Prefab, hitFX_Pos, Quaternion.identity);
 
-                if (gameObject.CompareTag(Tags.LEFT_ARM_TAG) || gameObject.CompareTag(Tags.LEFT_LEG_TAG))
+                if (gameObject.CompareTag(Tags.LEFT_ARM_TAG) || gameObject.CompareTag(Tags.LEFT_LEG_TAG)
+                    || gameObject.CompareTag(Tags.RIGHT_ARM_TAG))
                 {
                     hit[0].GetComponent<HealthScript>().ApplyDamage(damage, true);
                 }

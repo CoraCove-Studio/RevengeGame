@@ -30,6 +30,7 @@ public class HealthScript : MonoBehaviour
         animationScript = GetComponentInChildren<CharacterAnimation>();
         healthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
         healthBarBlink = GameObject.Find("InvincibilityFill");
+        enemyMovement = GetComponent<EnemyMovement>();
         if (!is_Player)
         {
             health = 100;
@@ -54,7 +55,9 @@ public class HealthScript : MonoBehaviour
                 healthBar.value = health;
                 StartCoroutine(Invincible());
             }
-            else if (!is_Player) { health -= (int)damage; }
+            else if (!is_Player) { health -= (int)damage;
+                enemyMovement.enabled = true;
+            }
         }
 
         //display health ui

@@ -106,6 +106,16 @@ public class CharacterAnimationDelegate : MonoBehaviour
         left_Leg_Attack_Point.tag = Tags.UNTAGGED_TAG;
     }
 
+    void TagRight_Arm()
+    {
+        right_Arm_Attack_Point.tag = Tags.RIGHT_ARM_TAG;
+    }
+
+    void UnTagRight_Arm()
+    {
+        right_Arm_Attack_Point.tag = Tags.UNTAGGED_TAG;
+    }
+
     void Enemy_StandUp()
     {
         StartCoroutine(StandUpAfterTime());
