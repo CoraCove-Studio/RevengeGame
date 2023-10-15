@@ -1020,6 +1020,7 @@ GameObject:
   - component: {fileID: 3551749616519116045}
   - component: {fileID: 5895417508156901358}
   - component: {fileID: 6143356025538676350}
+  - component: {fileID: 2664204576202295638}
   m_Layer: 5
   m_Name: InGameUI
   m_TagString: Untagged
@@ -1125,6 +1126,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2115398900855848114}
+--- !u!114 &2664204576202295638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997913571901409642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577a60eeac1d4284986e444e564bf367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesDefeated: 0
 --- !u!1 &5193443039223681918
 GameObject:
   m_ObjectHideFlags: 0
