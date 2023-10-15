@@ -22,13 +22,17 @@ public class HealthScript : MonoBehaviour
 
     public bool is_Player;
 
-
+    public GameObject currentDmgPopUp;
 
     private void Awake()
     {
         animationScript = GetComponentInChildren<CharacterAnimation>();
         healthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
         healthBarBlink = GameObject.Find("InvincibilityFill");
+        if (!is_Player)
+        {
+            health = 50;
+        }
     }
 
     public void ApplyDamage(float damage, bool knockDown)
@@ -37,15 +41,16 @@ public class HealthScript : MonoBehaviour
         {
             return;
         }
-        if (randomDmg) { damage = Random.Range(damage * 0.75f, (damage * 1.25f) + 1); }
-        if (!invincible)
+        else
         {
-            health -= (int)damage;
-            if (is_Player)
+            if (randomDmg) { damage = Random.Range(damage * 0.75f, (damage * 1.25f) + 1); }
+            if (is_Player && !invincible)
             {
+                health -= (int)damage;
                 healthBar.value = health;
                 StartCoroutine(Invincible());
             }
+            else if (!is_Player) { health -= (int)damage; }
         }
 
         //display health ui
@@ -64,19 +69,17 @@ public class HealthScript : MonoBehaviour
                 Behaviour moveScript = gameObject.GetComponent<EnemyMovement>();
                 moveScript.enabled = false; // Needs to be disabled, otherwise enemy refuses to die.
                 CapsuleCollider collider = gameObject.GetComponent<CapsuleCollider>();
-                collider.excludeLayers = LayerMask.GetMask("Player"); // Stops the player from being able to collide with enemies on death.
-                //collider.direction = 2;
-                //collider.center = new Vector3(0, 0.2f, 1);
+                Destroy(gameObject.GetComponent<Rigidbody>());
+                Destroy(collider);
+                //collider.excludeLayers = LayerMask.GetMask("Player"); // Stops the player from being able to collide with enemies on death.
             }
 
             return;
         }
-        else if (!invincible) { StartCoroutine(Invincible()); }
 
         if (!is_Player)
         {
-            //dmgPopUp = GameObject.Find("DMG-PopUp(Clone)");
-            //dmgPopUp.transform.GetChild(0).GetComponent<TMP_Text>().text = ((int)damage).ToString();
+            currentDmgPopUp.transform.GetChild(0).GetComponent<TMP_Text>().text = ((int)damage).ToString();
 
             if (knockDown)
             {
@@ -99,7 +102,7 @@ public class HealthScript : MonoBehaviour
     // Entity becomes temporarily invincible when hit.
     IEnumerator Invincible()
     {
-        invincible = true;
+        //invincible = true;
         yield return new WaitForSeconds(2.0f);
         // Play animation here?
         invincible = false;
