@@ -7,5 +7,5 @@ public enum SceneIndexes
     MainMenu = 1,
     Options = 2,
     Credits = 3,
-    LevelOne = 5
+    LevelOne = 7
 }
