@@ -42,7 +42,7 @@ public class LevelTransitions : MonoBehaviour
                     if (!transitioning) { StartCoroutine(FadeOut("LevelThree_Cutscene")); }
                     break;
                 case "LevelOne":
-                    if (!transitioning) { StartCoroutine(FadeOut("LevelTwo")); }
+                    if (!transitioning) { StartCoroutine(FadeOut("LevelTwo_Cutscene")); }
                     break;
                 default:
                     //

@@ -23,7 +23,9 @@ public class HealthScript : MonoBehaviour
 
     public bool is_Player;
 
-    public GameObject currentDmgPopUp;
+    [HideInInspector] public GameObject currentDmgPopUp;
+
+    private GameObject enemyHP;
 
     private void Awake()
     {
@@ -33,7 +35,10 @@ public class HealthScript : MonoBehaviour
         enemyMovement = GetComponent<EnemyMovement>();
         if (!is_Player)
         {
-            health = 100;
+            GameObject enemyHP = Instantiate(Resources.Load<GameObject>("Prefabs/UI/EnemyHP"), Vector3.zero, Quaternion.identity);
+            enemyHP.transform.parent = this.transform.GetChild(0).transform;
+            enemyHP.transform.localPosition = new Vector3(0, 2.0f, 0);
+            healthBar = enemyHP.transform.GetChild(0).GetComponent<Slider>();
         }
     }
 
@@ -55,7 +60,10 @@ public class HealthScript : MonoBehaviour
                 healthBar.value = health;
                 StartCoroutine(Invincible());
             }
-            else if (!is_Player) { health -= (int)damage;
+            else if (!is_Player)
+            {
+                health -= (int)damage;
+                healthBar.value = health;
                 enemyMovement.enabled = true;
             }
         }
@@ -73,6 +81,7 @@ public class HealthScript : MonoBehaviour
             }
             else
             {
+                Destroy(transform.GetChild(0).GetChild(transform.GetChild(0).childCount-1).gameObject);
                 LevelTransitions lvlScript = GameObject.Find("InGameUI").GetComponent<LevelTransitions>();
                 lvlScript.enemiesDefeated++;
                 gameObject.tag = "Untagged";

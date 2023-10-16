@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/LevelTwo.unity
     guid: 4452bf5dd50ec1f488f5ac302bf5f253
   - enabled: 1
+    path: Assets/Scenes/Cutscenes/LevelThree_Cutscene.unity
+    guid: 5dec16d8951565547a1a2d73b69cab60
+  - enabled: 1
     path: Assets/Scenes/Menu Scenes/Mission Lobby/Moon Mercenary.unity
     guid: e2a935e03946fed478da826a836d6d26
   - enabled: 1

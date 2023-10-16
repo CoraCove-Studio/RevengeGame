@@ -42,10 +42,8 @@ public class Dialogue : MonoBehaviour
         {
             case "LevelThree_Cutscene":
                 documentPath = "Other/Level03-Dialogue";
-                GetDialogueList(documentPath);
-                StartDialogue();
                 break;
-            case "LevelTwo":
+            case "LevelTwo_Cutscene":
                 documentPath = "Other/Level02-Dialogue";
                 break;
             case "LevelOne":
@@ -56,7 +54,7 @@ public class Dialogue : MonoBehaviour
                 break;
         }
         GetDialogueList(documentPath);
-        //StartDialogue();
+        StartDialogue();
     }
 
     // Update is called once per frame
