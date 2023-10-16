@@ -37,7 +37,7 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
         foreach (Transform child in gameObject.transform)
         {
-            if (child.gameObject.name != "PauseMenu" || child.gameObject.name != "LevelTransition") { child.gameObject.SetActive(true); }
+            if (child.gameObject.name != "PauseMenu" && child.gameObject.name != "LevelTransition" && child.gameObject.name != "CutsceneBG") { child.gameObject.SetActive(true); }
             else { child.gameObject.SetActive(false); }
         }
     }
