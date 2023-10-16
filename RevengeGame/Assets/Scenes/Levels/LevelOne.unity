@@ -1749,6 +1749,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man_03
       objectReference: {fileID: 0}
+    - target: {fileID: 3344797552917926168, guid: da1203547328fdb41974e0b5334e799a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8340921455869514200, guid: da1203547328fdb41974e0b5334e799a,
         type: 3}
       propertyPath: m_Controller
@@ -4484,6 +4489,10 @@ PrefabInstance:
     - target: {fileID: 100312, guid: 8bf4ca6f6f02d554e9cbb663d10ef7a4, type: 3}
       propertyPath: m_Name
       value: Winston
+      objectReference: {fileID: 0}
+    - target: {fileID: 100312, guid: 8bf4ca6f6f02d554e9cbb663d10ef7a4, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400312, guid: 8bf4ca6f6f02d554e9cbb663d10ef7a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8836,6 +8845,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SantaClaus
       objectReference: {fileID: 0}
+    - target: {fileID: 8622530670846373209, guid: c73f11c7efd75c44ba020cdfddad630e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -402264419416216859, guid: c73f11c7efd75c44ba020cdfddad630e, type: 3}
     m_RemovedGameObjects: []
@@ -9403,7 +9417,7 @@ GameObject:
   - component: {fileID: 1543046962}
   m_Layer: 8
   m_Name: AnimeGrill
-  m_TagString: CanTalkTo
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
