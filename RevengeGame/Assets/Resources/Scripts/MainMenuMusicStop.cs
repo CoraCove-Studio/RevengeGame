@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class AudioChecker : MonoBehaviour
+public class MainMenuMusicStop : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,15 +16,7 @@ public class AudioChecker : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
-        if (currentScene.name == "LevelThree_Cutscene")
-        {
-            Destroy(gameObject);
-        }
-        else if (currentScene.name == "LevelTwo_Cutscene")
-        {
-            Destroy(gameObject);
-        }
-        else if (currentScene.name == "Loading Screen")
+        if (currentScene.name == "Loading Screen")
         {
             Destroy(gameObject);
         }
