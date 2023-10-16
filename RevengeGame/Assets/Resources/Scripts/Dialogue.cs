@@ -19,8 +19,11 @@ public class Dialogue : MonoBehaviour
     private string documentPath;
     private string currentEvent;
     private string currentDialogue;
+    string currentLevel;
 
     private bool midDialogue = false;
+
+    public LevelTransitions lvlScript;
 
     private Coroutine co; // Fun (terrible) fact: Unity is EVIL INCARNATE and will only stop coroutines if they're stopped in the same exact fashion they're started. See: https://discussions.unity.com/t/how-to-stop-a-co-routine-in-c-instantly/49118/4
 
@@ -32,11 +35,15 @@ public class Dialogue : MonoBehaviour
         dialogueContent = dialogueBox.transform.GetChild(1).GetComponent<TMP_Text>(); // The dialogue being said.
         dialoguePrompt = transform.GetChild(1).gameObject;
 
-        string currentLevel = SceneManager.GetActiveScene().name;
+        lvlScript = gameObject.transform.parent.gameObject.GetComponent<LevelTransitions>();
+
+        currentLevel = SceneManager.GetActiveScene().name;
         switch (currentLevel)
         {
-            case "LevelThree":
+            case "LevelThree_Cutscene":
                 documentPath = "Other/Level03-Dialogue";
+                GetDialogueList(documentPath);
+                StartDialogue();
                 break;
             case "LevelTwo":
                 documentPath = "Other/Level02-Dialogue";
@@ -49,7 +56,7 @@ public class Dialogue : MonoBehaviour
                 break;
         }
         GetDialogueList(documentPath);
-        StartDialogue();
+        //StartDialogue();
     }
 
     // Update is called once per frame
@@ -102,6 +109,23 @@ public class Dialogue : MonoBehaviour
             dialogueBox.SetActive(false);
             Time.timeScale = 1f;
             arrayPos = 0;
+            if (currentLevel.EndsWith("_Cutscene"))
+            {
+                switch (currentLevel)
+                {
+                    case "LevelThree_Cutscene":
+                        StartCoroutine(lvlScript.FadeOut("LevelThree"));
+                        break;
+                    case "LevelTwo_Cutscene":
+                        StartCoroutine(lvlScript.FadeOut("LevelTwo"));
+                        break;
+                    case "LevelOne_Cutscene":
+                        StartCoroutine(lvlScript.FadeOut("LevelOne"));
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 

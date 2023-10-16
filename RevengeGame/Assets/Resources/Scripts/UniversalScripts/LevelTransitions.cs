@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,18 +7,25 @@ using UnityEngine.UI;
 
 public class LevelTransitions : MonoBehaviour
 {
+    private string currentLevel;
+
     public int enemiesDefeated = 0;
     private int winCondition;
 
     private GameObject transition;
     public bool transitioning = false;
+    private GameObject cutsceneBG;
 
     // Start is called before the first frame update
     void Start()
     {
-        winCondition = FindGameObjectsInLayer(8).Length;
+        currentLevel = SceneManager.GetActiveScene().name;
+        try { winCondition = FindGameObjectsInLayer(8).Length; }
+        catch (NullReferenceException) { winCondition = 100; }
         transition = GameObject.Find("LevelTransition");
+        cutsceneBG = gameObject.transform.GetChild(0).gameObject;
         StartCoroutine(FadeIn());
+        CheckCutscene();
     }
 
     // Update is called once per frame
@@ -25,14 +33,13 @@ public class LevelTransitions : MonoBehaviour
     {
         if (enemiesDefeated == winCondition)
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
             switch (currentLevel)
             {
                 case "LevelThree":
                     //
                     break;
                 case "LevelTwo":
-                    if (!transitioning) { StartCoroutine(FadeOut("LevelThree")); }
+                    if (!transitioning) { StartCoroutine(FadeOut("LevelThree_Cutscene")); }
                     break;
                 case "LevelOne":
                     if (!transitioning) { StartCoroutine(FadeOut("LevelTwo")); }
@@ -44,7 +51,30 @@ public class LevelTransitions : MonoBehaviour
         }
     }
 
-    IEnumerator FadeIn()
+    void CheckCutscene()
+    {
+        if (currentLevel.EndsWith("_Cutscene"))
+        {
+            Image bg = cutsceneBG.GetComponent<Image>();
+            switch (currentLevel)
+            {
+                case "LevelThree_Cutscene":
+                    bg.sprite = Resources.Load<Sprite>("2D/L3-Cutscene_1");
+                    break;
+                case "LevelTwo_Cutscene":
+                    bg.color = Color.black;
+                    break;
+                case "LevelOne_Cutscene":
+                    bg.color = Color.black;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else { cutsceneBG.SetActive(false); }
+    }
+
+    public IEnumerator FadeIn()
     {
         transitioning = true;
         Image image = transition.GetComponent<Image>();
@@ -55,13 +85,13 @@ public class LevelTransitions : MonoBehaviour
         {
             color.a -= 0.1f;
             image.color = color;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSecondsRealtime(0.1f);
         }
         transitioning = false;
         transition.SetActive(false);
     }
 
-    IEnumerator FadeOut(string level)
+    public IEnumerator FadeOut(string level)
     {
         transitioning = true;
         transition.SetActive(true);
@@ -73,7 +103,7 @@ public class LevelTransitions : MonoBehaviour
         {
             color.a += 0.1f;
             image.color = color;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSecondsRealtime(0.1f);
         }
         transitioning = false;
         SceneManager.LoadScene(level);
