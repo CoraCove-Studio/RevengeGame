@@ -17,15 +17,11 @@ public class AudioChecker : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
-        if (currentScene.name == "Loading Screen")
+        if (currentScene.name == "LevelThree_Cutscene")
         {
             Destroy(gameObject);
         }
-        else if (currentScene.name == "Loading Screen 2")
-        {
-            Destroy(gameObject);
-        }
-        else if(currentScene.name == "Loading Screen 1")
+        else if (currentScene.name == "LevelTwo_Cutscene")
         {
             Destroy(gameObject);
         }

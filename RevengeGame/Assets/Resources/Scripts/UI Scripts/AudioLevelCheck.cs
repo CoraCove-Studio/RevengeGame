@@ -17,7 +17,11 @@ public class AudioLevelCheck : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
-        if (currentScene.name == "LevelTwo")
+        if (currentScene.name == "LevelThree_Cutscene")
+        {
+            Destroy(gameObject);
+        }
+        else if (currentScene.name == "LevelTwo_Cutscene")
         {
             Destroy(gameObject);
         }
