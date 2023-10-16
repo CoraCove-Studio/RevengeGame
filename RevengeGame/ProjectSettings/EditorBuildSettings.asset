@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scenes/MainMenu.unity
     guid: 676ecad450656d945a07f25b12984dac
   - enabled: 1
-    path: Assets/Scenes/Menu Scenes/Option Screen/Options Screen.unity
+    path: Assets/Scenes/Menu Scenes/Options Screen.unity
     guid: 1ba25fc412b292444835a54169b0c9b2
   - enabled: 1
     path: Assets/Scenes/Menu Scenes/Credits.unity
