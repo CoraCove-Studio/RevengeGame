@@ -664,7 +664,8 @@ AudioSource:
   m_GameObject: {fileID: 214031001}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6101887690534909392, guid: 2cf7acb083d305f4dbe9421b4d6fbab8,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -4084,7 +4085,8 @@ AudioSource:
   m_GameObject: {fileID: 745878150}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6101887690534909392, guid: 2cf7acb083d305f4dbe9421b4d6fbab8,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -4395,7 +4397,8 @@ AudioSource:
   m_GameObject: {fileID: 750146698}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6101887690534909392, guid: 2cf7acb083d305f4dbe9421b4d6fbab8,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -5898,7 +5901,8 @@ AudioSource:
   m_GameObject: {fileID: 1112465743}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6101887690534909392, guid: 2cf7acb083d305f4dbe9421b4d6fbab8,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -6891,7 +6895,8 @@ AudioSource:
   m_GameObject: {fileID: 1476464292}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6101887690534909392, guid: 2cf7acb083d305f4dbe9421b4d6fbab8,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -7154,6 +7159,12 @@ PrefabInstance:
       propertyPath: walk_Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3823164263998959984, guid: 8e251de3274ddfe4a93127be5b0fedfb,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 6101887690534909392, guid: 2cf7acb083d305f4dbe9421b4d6fbab8,
+        type: 2}
     - target: {fileID: 4134648589864638725, guid: 8e251de3274ddfe4a93127be5b0fedfb,
         type: 3}
       propertyPath: m_Name
