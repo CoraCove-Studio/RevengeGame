@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
@@ -35,20 +36,20 @@ public class Dialogue : MonoBehaviour
         switch (currentLevel)
         {
             case "LevelThree":
-                documentPath = "Other/Level01-Dialogue";
+                documentPath = "Other/Level03-Dialogue";
                 break;
             case "LevelTwo":
                 documentPath = "Other/Level02-Dialogue";
                 break;
             case "LevelOne":
-                documentPath = "Other/Level03-Dialogue";
+                documentPath = "Other/Level01-Dialogue";
                 break;
             default:
                 documentPath = "Other/Level01-Dialogue";
                 break;
         }
         GetDialogueList(documentPath);
-        //StartDialogue();
+        StartDialogue();
     }
 
     // Update is called once per frame
@@ -90,6 +91,7 @@ public class Dialogue : MonoBehaviour
                 dialogueName.text = name;
                 dialogueContent.text = "";
                 currentDialogue = dialogue;
+                SetPortrait(name);
                 co = StartCoroutine(TextPace(dialogue));
                 arrayPos++; // Progresses position of dialogue.
             }
@@ -101,6 +103,15 @@ public class Dialogue : MonoBehaviour
             Time.timeScale = 1f;
             arrayPos = 0;
         }
+    }
+
+    void SetPortrait(string name)
+    {
+        GameObject portrait = GameObject.Find("DialoguePortrait");
+        GameObject unknownP = portrait.transform.GetChild(1).gameObject;
+        GameObject revengeP = portrait.transform.GetChild(2).gameObject;
+        if (name == "REVENGE") { unknownP.SetActive(false); revengeP.SetActive(true); }
+        else { unknownP.SetActive(true); revengeP.SetActive(false); }
     }
 
     IEnumerator TextPace(string dialogue)
