@@ -684,12 +684,12 @@ PrefabInstance:
         type: 3}
       propertyPath: Track1
       value: 
-      objectReference: {fileID: 156930778}
+      objectReference: {fileID: 156930777}
     - target: {fileID: 6700777173646415633, guid: e5f2ca332acc1574ca3875585b1f4ae4,
         type: 3}
       propertyPath: Track2
       value: 
-      objectReference: {fileID: 156930777}
+      objectReference: {fileID: 156930778}
     - target: {fileID: 6700777173646415633, guid: e5f2ca332acc1574ca3875585b1f4ae4,
         type: 3}
       propertyPath: Track3

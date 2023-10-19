@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scenes/Level Select.unity
     guid: 437056bf7dc8ebd4fb461a729ff826b9
   - enabled: 1
-    path: Assets/Scenes/Menu Scenes/Mission Lobby/CoffeBrawl.unity
+    path: Assets/Scenes/Menu Scenes/Mission Lobby/CoffeeBrawl.unity
     guid: fae0293c858a3e34e8ac63f8b94aa8cf
   - enabled: 1
     path: Assets/Scenes/LoadingScree/Loading Screen.unity

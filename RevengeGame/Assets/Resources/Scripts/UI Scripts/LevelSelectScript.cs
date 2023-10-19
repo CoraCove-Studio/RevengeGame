@@ -24,7 +24,7 @@ public class LevelSelectScript : MonoBehaviour
     IEnumerator LevelButtonClick()
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("CoffeBrawl");
+        SceneManager.LoadScene("CoffeeBrawl");
     }
     
     IEnumerator LevelButtonTwoClick()
