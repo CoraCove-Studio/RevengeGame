@@ -2351,6 +2351,7 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 103837470}
   left_Leg_Attack_Point: {fileID: 707442613}
   right_Leg_Attack_Point: {fileID: 761335852}
+  head_Attack_Point: {fileID: 0}
   stand_Up_Timer: 0
   whoosh_Sound: {fileID: 8300000, guid: f117e33df029db94e9ef9f85f8467188, type: 3}
   fall_Sound: {fileID: 8300000, guid: b7f5041c2ae2a3144bd81e80eb011790, type: 3}
@@ -3837,6 +3838,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1862512604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &468559801
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70895255
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7052563
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688078713901666300, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthPickup Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 181b92c2c5702534ab2aa3bcba7ff976, type: 3}
 --- !u!1 &490966563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9193,6 +9262,7 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 1549495429}
   left_Leg_Attack_Point: {fileID: 1812767137}
   right_Leg_Attack_Point: {fileID: 657612332}
+  head_Attack_Point: {fileID: 0}
   stand_Up_Timer: 0
   whoosh_Sound: {fileID: 8300000, guid: 8713a1f4ff689fa4d9a95577261d30e7, type: 3}
   fall_Sound: {fileID: 8300000, guid: c394acb0ceadc3846b533620ccf36c8b, type: 3}
@@ -10493,6 +10563,7 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 1767818073}
   left_Leg_Attack_Point: {fileID: 933308110}
   right_Leg_Attack_Point: {fileID: 264287338}
+  head_Attack_Point: {fileID: 0}
   stand_Up_Timer: 2
   whoosh_Sound: {fileID: 8300000, guid: 849e4b6cc554dc84cad7edb0b3dd0580, type: 3}
   fall_Sound: {fileID: 8300000, guid: 687295a473ccecb44b657a1ae880cd71, type: 3}
@@ -10635,6 +10706,7 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 1953144959}
   left_Leg_Attack_Point: {fileID: 1901172216}
   right_Leg_Attack_Point: {fileID: 868128503}
+  head_Attack_Point: {fileID: 0}
   stand_Up_Timer: 2
   whoosh_Sound: {fileID: 8300000, guid: d9be4819f5f34eb45819b4521988cc10, type: 3}
   fall_Sound: {fileID: 8300000, guid: 5009b21072d64c74892e4ea9a54c413d, type: 3}
@@ -11235,6 +11307,7 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 2024538667}
   left_Leg_Attack_Point: {fileID: 1963895955}
   right_Leg_Attack_Point: {fileID: 884245310}
+  head_Attack_Point: {fileID: 0}
   stand_Up_Timer: 0
   whoosh_Sound: {fileID: 8300000, guid: d9be4819f5f34eb45819b4521988cc10, type: 3}
   fall_Sound: {fileID: 8300000, guid: 687295a473ccecb44b657a1ae880cd71, type: 3}
@@ -13845,6 +13918,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1980286044}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1991832605
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70895255
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7052563
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5688078713901666300, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthPickup Variant (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 181b92c2c5702534ab2aa3bcba7ff976, type: 3}
 --- !u!1001 &1996637952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17646,3 +17787,5 @@ SceneRoots:
   - {fileID: 1802040557}
   - {fileID: 41366824}
   - {fileID: 1862512604}
+  - {fileID: 468559801}
+  - {fileID: 1991832605}
