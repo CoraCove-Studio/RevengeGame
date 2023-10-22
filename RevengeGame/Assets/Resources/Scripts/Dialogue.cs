@@ -149,7 +149,10 @@ public class Dialogue : MonoBehaviour
             switch (currentLevel)
             {
                 case "LevelThree_Cutscene":
-                    //
+                    if (text_pos < 6) { SetCutsceneSlide(3, 1); }
+                    else if (text_pos > 5 && text_pos < 9) { SetCutsceneSlide(3, 2); }
+                    else if (text_pos == 9) { SetCutsceneSlide(3, 3); }
+                    else if (text_pos > 9) { SetCutsceneSlide(3, 4); }
                     break;
                 case "LevelTwo_Cutscene":
                     if (text_pos < 4) { SetCutsceneSlide(2, 1); }
