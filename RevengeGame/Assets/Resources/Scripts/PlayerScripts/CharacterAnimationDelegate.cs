@@ -8,6 +8,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
     public GameObject right_Arm_Attack_Point;
     public GameObject left_Leg_Attack_Point;
     public GameObject right_Leg_Attack_Point;
+    public GameObject head_Attack_Point;
 
     public float stand_Up_Timer;
 
@@ -84,6 +85,19 @@ public class CharacterAnimationDelegate : MonoBehaviour
         if (right_Leg_Attack_Point.activeInHierarchy)
         {
             right_Leg_Attack_Point.SetActive(false);
+        }
+    }
+
+    void Head_Attack_On()
+    {
+        head_Attack_Point.SetActive(true);
+    }
+
+    void Head_Attack_Off()
+    {
+        if (head_Attack_Point.activeInHierarchy)
+        {
+            head_Attack_Point.SetActive(false);
         }
     }
 
