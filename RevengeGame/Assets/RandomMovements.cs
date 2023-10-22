@@ -1,52 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI; //important
 
-//if you use this code you are contractually obligated to like the YT video
-public class RandomMovements : MonoBehaviour //don't forget to change the script name if you haven't
+public class RandomMovements : MonoBehaviour 
 {
-    public NavMeshAgent agent;
-    public float range; //radius of sphere
+    public Transform[] waypoints;
+    private int currentWaypointIndex = 0;
+    public float speed = 5f;
+    public float rotationSpeed = 100f;
 
-    public Transform centrePoint; //centre of the area the agent wants to move around in
-    //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
-
-    void Start()
+    private void Update()
     {
-        agent = GetComponent<NavMeshAgent>();
-    }
+        // Get the distance between the moving entity and the target waypoint
+        float distanceToWaypoint = Vector3.Distance(transform.position, waypoints[currentWaypointIndex].position);
 
-
-    void Update()
-    {
-        if (agent.remainingDistance <= agent.stoppingDistance) //done with path
+        // If the entity is close enough to the waypoint, proceed to the next one
+        if (distanceToWaypoint < 1f)
         {
-            Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
-            {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
-                agent.SetDestination(point);
-            }
+            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
         }
 
+        // Calculate the desired rotation to face the target waypoint
+        Quaternion desiredRotation = Quaternion.LookRotation(waypoints[currentWaypointIndex].position - transform.position);
+
+        // Smoothly rotate the player towards the target waypoint
+        transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, rotationSpeed * Time.deltaTime);
+
+        // Move the player towards the target waypoint
+        transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
     }
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
-    {
-
-        Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
-        {
-            //the 1.0f is the max distance from the random point to a point on the navmesh, might want to increase if range is big
-            //or add a for loop like in the documentation
-            result = hit.position;
-            return true;
-        }
-
-        result = Vector3.zero;
-        return false;
-    }
-
 
 }
