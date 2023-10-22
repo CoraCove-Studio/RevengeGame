@@ -59,10 +59,10 @@ public class LevelTransitions : MonoBehaviour
             switch (currentLevel)
             {
                 case "LevelThree_Cutscene":
-                    bg.sprite = Resources.Load<Sprite>("2D/L3-Cutscene_1");
+                    //
                     break;
                 case "LevelTwo_Cutscene":
-                    bg.sprite = Resources.Load<Sprite>("2D/L2-Cutscene_1");
+                    //
                     break;
                 case "LevelOne_Cutscene":
                     bg.color = Color.black;

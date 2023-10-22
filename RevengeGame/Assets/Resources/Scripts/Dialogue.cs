@@ -91,6 +91,7 @@ public class Dialogue : MonoBehaviour
         if (!dialogueBox.activeSelf) { dialogueBox.SetActive(true); } // Shows the dialogue box if not already displayed.
         try
         {
+            UpdateCutscene(arrayPos);
             var text = dialogueList[arrayPos]; // Grabs the currently "selected" dialogue from the array.
             var matches = Regex.Matches(text, @"\[(.+)] (.+)");
             if (matches.Count > 0 && matches[0].Groups.Count > 1) // If the search didn't turn up empty...
@@ -138,6 +139,39 @@ public class Dialogue : MonoBehaviour
         GameObject revengeP = portrait.transform.GetChild(2).gameObject;
         if (name == "REVENGE") { unknownP.SetActive(false); revengeP.SetActive(true); }
         else { unknownP.SetActive(true); revengeP.SetActive(false); }
+    }
+
+    void UpdateCutscene(int text_pos)
+    {
+        text_pos++; // So it starts from 1 instead of 0. Less confusing for this particular use case.
+        if (currentLevel.EndsWith("_Cutscene"))
+        {
+            switch (currentLevel)
+            {
+                case "LevelThree_Cutscene":
+                    //
+                    break;
+                case "LevelTwo_Cutscene":
+                    if (text_pos < 4) { SetCutsceneSlide(2, 1); }
+                    else if (text_pos == 4) { SetCutsceneSlide(2, 2); }
+                    else if (text_pos > 4 && text_pos < 8) { SetCutsceneSlide(2, 1); }
+                    else if (text_pos == 8) { SetCutsceneSlide(2, 3); }
+                    else if (text_pos > 8 && text_pos < 11) { SetCutsceneSlide(2, 1); }
+                    else if (text_pos == 11) { SetCutsceneSlide(2, 4); }
+                    break;
+                case "LevelOne_Cutscene":
+                    //
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    void SetCutsceneSlide(int cutscene, int slide)
+    {
+        Image bg = GameObject.Find("CutsceneBG").GetComponent<Image>();
+        bg.sprite = Resources.Load<Sprite>($"2D/L{cutscene}-Cutscene_{slide}");
     }
 
     IEnumerator TextPace(string dialogue)
