@@ -20,15 +20,12 @@ public class AttackUniversal : MonoBehaviour
 
     private HealthScript hpScript;
 
-    private void Awake()
-    {
-        gun = GameObject.FindWithTag(Tags.GUN_TAG);
-    }
-
     // Update is called once per frame
     void Update()
     {
         DetectCollision();
+
+        gun = GameObject.FindWithTag(Tags.GUN_TAG);
 
         if (gun != null)
         {
