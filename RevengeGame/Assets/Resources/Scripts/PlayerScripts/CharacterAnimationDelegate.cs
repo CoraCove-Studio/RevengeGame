@@ -9,6 +9,8 @@ public class CharacterAnimationDelegate : MonoBehaviour
     public GameObject left_Leg_Attack_Point;
     public GameObject right_Leg_Attack_Point;
     public GameObject head_Attack_Point;
+    public GameObject gunAttackPoint;
+    public GameObject hitFXPrefab;
 
     public float stand_Up_Timer;
 
@@ -16,7 +18,7 @@ public class CharacterAnimationDelegate : MonoBehaviour
 
     private AudioSource audioSource;
 
-    [SerializeField] private AudioClip whoosh_Sound, fall_Sound, ground_Hit_Sound, dead_Sound;
+    [SerializeField] private AudioClip whoosh_Sound, fall_Sound, ground_Hit_Sound, dead_Sound, pew_Sound;
 
     private EnemyMovement enemy_Movement;
 
@@ -130,6 +132,30 @@ public class CharacterAnimationDelegate : MonoBehaviour
         right_Arm_Attack_Point.tag = Tags.UNTAGGED_TAG;
     }
 
+    void Gun_Attack_On()
+    {
+        gunAttackPoint.SetActive(true);
+    }
+
+    void Gun_Attack_Off()
+    {
+        if (gunAttackPoint.activeInHierarchy)
+        {
+            gunAttackPoint.SetActive(false);
+        }
+    }
+
+    void TagGun()
+    {
+        gunAttackPoint.tag = Tags.GUN_TAG;
+        Instantiate(hitFXPrefab, gunAttackPoint.transform.position, Quaternion.identity);
+    }
+
+    void UnTagGun()
+    {
+        gunAttackPoint.tag = Tags.UNTAGGED_TAG;
+    }
+
     void Enemy_StandUp()
     {
         StartCoroutine(StandUpAfterTime());
@@ -145,6 +171,13 @@ public class CharacterAnimationDelegate : MonoBehaviour
     {
         audioSource.volume = 0.2f;
         audioSource.clip = whoosh_Sound;
+        audioSource.Play();
+    }
+
+    public void Pew_FX_Sound()
+    {
+        audioSource.volume = 0.5f;
+        audioSource.clip = pew_Sound;
         audioSource.Play();
     }
 

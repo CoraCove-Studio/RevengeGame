@@ -18,6 +18,7 @@ public class AnimationTags
     public const string ATTACK_2_TRIGGER = "Attack2";
     public const string ATTACK_3_TRIGGER = "Attack3";
     public const string ATTACK_4_TRIGGER = "Attack4";
+    public const string ATTACK_5_TRIGGER = "Attack5";
 
     public const string IDLE_ANIMATION = "Idle";
 
@@ -46,4 +47,5 @@ public class Tags
     public const string UNTAGGED_TAG = "Untagged";
     public const string MAIN_CAMERA_TAG = "MainCamera";
     public const string HEALTH_UI = "HealthUI";
+    public const string GUN_TAG = "Gun";
 }

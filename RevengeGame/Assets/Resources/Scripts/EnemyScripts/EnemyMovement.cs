@@ -84,7 +84,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (current_Attack_Time > default_Attack_Time)
         {
-            enemyAnim.EnemyAttack(Random.Range(0, 4));
+            enemyAnim.EnemyAttack(Random.Range(0, 5));
 
             current_Attack_Time = 0f;
         }

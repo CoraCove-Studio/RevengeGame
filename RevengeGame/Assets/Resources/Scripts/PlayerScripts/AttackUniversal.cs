@@ -15,17 +15,25 @@ public class AttackUniversal : MonoBehaviour
     public GameObject hit_FX_Prefab;
     public GameObject dmgPopUpPrefab;
 
+    private GameObject gun;
+    private bool gunActive = false;
+
     private HealthScript hpScript;
 
-    private void Start()
+    private void Awake()
     {
-        //
+        gun = GameObject.FindWithTag(Tags.GUN_TAG);
     }
 
     // Update is called once per frame
     void Update()
     {
         DetectCollision();
+
+        if (gun != null)
+        {
+            gunActive = true;
+        }
     }
 
     private void DetectCollision()
@@ -72,9 +80,15 @@ public class AttackUniversal : MonoBehaviour
 
             if (is_Enemy)
             {
-                hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
+                if (gunActive)
+                {
+                    hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
+                }
+                else
+                {
+                    hit[0].GetComponent<HealthScript>().ApplyDamage(damage, false);
+                }
             }
-
             gameObject.SetActive(false);
         }
     }
