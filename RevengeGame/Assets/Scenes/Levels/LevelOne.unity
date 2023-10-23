@@ -550,15 +550,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4197068249736730, guid: 9094aa5ae2e324346997aa2ea9ad7930, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -118.04
+      value: -115.17
       objectReference: {fileID: 0}
     - target: {fileID: 4197068249736730, guid: 9094aa5ae2e324346997aa2ea9ad7930, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.64000005
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 4197068249736730, guid: 9094aa5ae2e324346997aa2ea9ad7930, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.76
+      value: 20.94
       objectReference: {fileID: 0}
     - target: {fileID: 4197068249736730, guid: 9094aa5ae2e324346997aa2ea9ad7930, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1311,7 +1311,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -2090,7 +2090,7 @@ PrefabInstance:
     - target: {fileID: 2675361429882964898, guid: da1203547328fdb41974e0b5334e799a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.41
+      value: -0.07499981
       objectReference: {fileID: 0}
     - target: {fileID: 2675361429882964898, guid: da1203547328fdb41974e0b5334e799a,
         type: 3}
@@ -2100,17 +2100,17 @@ PrefabInstance:
     - target: {fileID: 2675361429882964898, guid: da1203547328fdb41974e0b5334e799a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2675361429882964898, guid: da1203547328fdb41974e0b5334e799a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2675361429882964898, guid: da1203547328fdb41974e0b5334e799a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2675361429882964898, guid: da1203547328fdb41974e0b5334e799a,
         type: 3}
@@ -2495,7 +2495,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -3657,7 +3657,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -4054,7 +4054,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -4107,7 +4107,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -4611,7 +4611,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -5172,7 +5172,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -5464,7 +5464,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -5990,7 +5990,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -6188,7 +6188,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -6888,7 +6888,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -7289,7 +7289,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -11075,7 +11075,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -12568,7 +12568,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -12993,7 +12993,7 @@ Transform:
   m_GameObject: {fileID: 1882500823}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.14, y: 0.13, z: 2.265}
+  m_LocalPosition: {x: 2.14, y: 0.13, z: 8.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13048,7 +13048,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -13333,7 +13333,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -13504,7 +13504,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -13802,7 +13802,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 1
-  damage: 2
+  damage: 10
   is_Player: 0
   is_Enemy: 1
   hit_FX_Prefab: {fileID: 0}
@@ -14701,6 +14701,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2318772474606428979, guid: 7409e59c5a5a52046a991a5ee8b6a053,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222494802862045474, guid: 7409e59c5a5a52046a991a5ee8b6a053,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4099388222194950758, guid: 7409e59c5a5a52046a991a5ee8b6a053,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14751,12 +14761,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5143423973912156921, guid: 7409e59c5a5a52046a991a5ee8b6a053,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6214264153802123055, guid: 7409e59c5a5a52046a991a5ee8b6a053,
         type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 6101887690534909392, guid: 2cf7acb083d305f4dbe9421b4d6fbab8,
         type: 2}
+    - target: {fileID: 6461800557921278839, guid: 7409e59c5a5a52046a991a5ee8b6a053,
+        type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6535940047453437444, guid: 7409e59c5a5a52046a991a5ee8b6a053,
         type: 3}
       propertyPath: mainCam

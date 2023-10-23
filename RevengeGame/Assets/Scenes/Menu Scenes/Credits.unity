@@ -859,12 +859,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf74c9cecca4e8499aa6a649bc11ae7, type: 3}
---- !u!82 &1241824752 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2099692404395168881, guid: ebf74c9cecca4e8499aa6a649bc11ae7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1241824751}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1342240771
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +919,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.3921569, g: 0.38431376, b: 0.46274513, a: 1}
+    m_NormalColor: {r: 0.68235296, g: 0.64705884, b: 1, a: 1}
     m_HighlightedColor: {r: 0.735849, g: 0.56037277, b: 0.079832695, a: 1}
     m_PressedColor: {r: 1, g: 0.67876756, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -960,9 +954,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1241824752}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 528387693}
+        m_TargetAssemblyTypeName: UIButtons, Assembly-CSharp
+        m_MethodName: OnQuitGameClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1138,7 +1132,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.3921569, g: 0.38431376, b: 0.46274513, a: 1}
+    m_NormalColor: {r: 0.68235296, g: 0.64705884, b: 1, a: 1}
     m_HighlightedColor: {r: 0.735849, g: 0.56037277, b: 0.079832695, a: 1}
     m_PressedColor: {r: 1, g: 0.67876756, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1161,7 +1155,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 528387693}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIButtons, Assembly-CSharp
         m_MethodName: OnQuitGameClick
         m_Mode: 1
@@ -1173,7 +1167,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1241824752}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -1654,17 +1648,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Darnell - UI Programmer, Level Designer
+  m_text: 'Darnell - UI Programmer, Level Designer, QA
 
 
     Rachel - Gameplay Designer,
-    Artist
+    Programmer, Level Designer, QA
 
 
-    Casey - Cutscene Artist, Programmer
+    Casey - Cutscene Artist, Programmer, QA
 
 
-    Nick - 3d Modeler'
+    Nick
+    - 3d Modeler, QA
+
+
+    Animations: Mixamo & Osarion from FreeCodeCamp
+
+    Character
+    Models: Unity Asset Store & Sketchfab
+
+    Planet & Space: Unity Asset Store
+
+    Textures
+    for Planets: Internet Search'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 100fbd0ac64930447b0ee568260b1ee2, type: 2}
   m_sharedMaterial: {fileID: 1132170062828959344, guid: 100fbd0ac64930447b0ee568260b1ee2,
@@ -1692,15 +1698,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
+  m_fontSize: 36.05
   m_fontSizeBase: 55
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
