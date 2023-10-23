@@ -40,6 +40,11 @@ public class Dialogue : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene().name;
         switch (currentLevel)
         {
+            case "Win_Cutscene":
+                documentPath = "Other/Level00-Dialogue";
+                GetDialogueList(documentPath);
+                StartDialogue();
+                break;
             case "LevelThree_Cutscene":
                 documentPath = "Other/Level03-Dialogue";
                 GetDialogueList(documentPath);
@@ -148,6 +153,16 @@ public class Dialogue : MonoBehaviour
         {
             switch (currentLevel)
             {
+                case "Win_Cutscene":
+                    if (text_pos < 6) { SetCutsceneSlide(0, 1); }
+                    else if (text_pos == 6) { SetCutsceneSlide(0, 2); }
+                    else if (text_pos == 7) { SetCutsceneSlide(0, 3); }
+                    else if (text_pos > 7 && text_pos < 10) { SetCutsceneSlide(0, 4); }
+                    else if (text_pos == 10) { SetCutsceneSlide(0, 5); }
+                    else if (text_pos > 10 && text_pos < 14) { SetCutsceneSlide(0, 6); }
+                    else if (text_pos > 14 && text_pos < 17) { SetCutsceneSlide(0, 7); }
+                    else if (text_pos > 17) { SetCutsceneSlide(0, 8); }
+                    break;
                 case "LevelThree_Cutscene":
                     if (text_pos < 6) { SetCutsceneSlide(3, 1); }
                     else if (text_pos > 5 && text_pos < 9) { SetCutsceneSlide(3, 2); }

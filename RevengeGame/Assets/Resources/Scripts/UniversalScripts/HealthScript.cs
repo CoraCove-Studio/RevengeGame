@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
@@ -50,7 +51,8 @@ public class HealthScript : MonoBehaviour
         bool isCrit = false;
         if (characterDied)
         {
-            return;
+            LevelTransitions lvlScript = GameObject.Find("InGameUI").GetComponent<LevelTransitions>();
+            StartCoroutine(lvlScript.FadeOut("LoseScreen"));
         }
         else
         {

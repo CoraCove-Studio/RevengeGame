@@ -36,7 +36,7 @@ public class LevelTransitions : MonoBehaviour
             switch (currentLevel)
             {
                 case "LevelThree":
-                    //
+                    if (!transitioning) { StartCoroutine(FadeOut("Win_Cutscene")); }
                     break;
                 case "LevelTwo":
                     if (!transitioning) { StartCoroutine(FadeOut("LevelThree_Cutscene")); }
