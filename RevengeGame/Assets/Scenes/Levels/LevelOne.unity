@@ -4979,7 +4979,7 @@ CapsuleCollider:
   m_Radius: 0.2
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: -1.8}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &710797715
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5016,7 +5016,7 @@ Transform:
   m_GameObject: {fileID: 710797711}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.44, y: 0, z: 7.417}
+  m_LocalPosition: {x: 6.44, y: 0, z: -4.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5266,7 +5266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400312, guid: 8bf4ca6f6f02d554e9cbb663d10ef7a4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.7669997
+      value: 0.028000355
       objectReference: {fileID: 0}
     - target: {fileID: 400312, guid: 8bf4ca6f6f02d554e9cbb663d10ef7a4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14787,6 +14787,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8168129718965474203, guid: 7409e59c5a5a52046a991a5ee8b6a053,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16789,7 +16794,7 @@ PrefabInstance:
     - target: {fileID: 5854009748499703326, guid: 8e251de3274ddfe4a93127be5b0fedfb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.915
+      value: 4.536
       objectReference: {fileID: 0}
     - target: {fileID: 5854009748499703326, guid: 8e251de3274ddfe4a93127be5b0fedfb,
         type: 3}
