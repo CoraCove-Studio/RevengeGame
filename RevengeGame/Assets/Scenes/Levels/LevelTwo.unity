@@ -10972,7 +10972,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  mainCam: {fileID: 0}
   randomDmg: 1
   randomHeal: 0
   is_Player: 0
@@ -11168,7 +11167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  mainCam: {fileID: 0}
   randomDmg: 1
   randomHeal: 0
   is_Player: 0
@@ -13021,7 +13019,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  mainCam: {fileID: 0}
   randomDmg: 1
   randomHeal: 0
   is_Player: 0
@@ -13740,7 +13737,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  mainCam: {fileID: 0}
   randomDmg: 1
   randomHeal: 0
   is_Player: 0
@@ -17127,6 +17123,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3005305004571721498, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.052
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005305004571721498, guid: 181b92c2c5702534ab2aa3bcba7ff976,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.22
+      objectReference: {fileID: 0}
     - target: {fileID: 5024836139108898118, guid: 181b92c2c5702534ab2aa3bcba7ff976,
         type: 3}
       propertyPath: m_LocalPosition.x
