@@ -11,7 +11,6 @@ public class HealthScript : MonoBehaviour
     private GameObject dmgPopUp;
     private Slider healthBar;
     private GameObject healthBarBlink;
-    public Camera mainCam;
     private RectTransform healthBarRectTransform;
 
     private bool invincible = false;
@@ -43,13 +42,6 @@ public class HealthScript : MonoBehaviour
             enemyHP.transform.parent = this.transform.GetChild(0).transform;
             enemyHP.transform.localPosition = new Vector3(0, 2.0f, 0);
             healthBar = enemyHP.transform.GetChild(0).GetComponent<Slider>();
-
-            //to clamp the healthbars to the mainCamera
-            //not working
-
-            Vector3 viewportPosition = mainCam.WorldToViewportPoint(enemyHP.transform.localPosition);
-            healthBarRectTransform.anchorMin = viewportPosition;
-            healthBarRectTransform.anchorMax = viewportPosition;
         }
     }
 
