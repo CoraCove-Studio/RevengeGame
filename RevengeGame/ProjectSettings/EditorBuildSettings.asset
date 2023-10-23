@@ -56,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu Scenes/TempHelpScene.unity
     guid: 4614886c83ea8e447b3e05591819fbf6
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Win_Cutscene.unity
+    guid: 1ac1463c4e77be04690c20e3563d6b21
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 3d6c766d8d03a0849974f5b5011493e1
   m_configObjects: {}

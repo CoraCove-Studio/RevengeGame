@@ -1661,13 +1661,13 @@ MonoBehaviour:
     Artist
 
 
-    Casey - Gameplay Designer, Programmer
+    Casey - Cutscene Artist, Programmer
 
 
     Nick - 3d Modeler'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6b1f445cc8fcda048a04e8336fb101e6, type: 2}
-  m_sharedMaterial: {fileID: -4905530433470309915, guid: 6b1f445cc8fcda048a04e8336fb101e6,
+  m_fontAsset: {fileID: 11400000, guid: 100fbd0ac64930447b0ee568260b1ee2, type: 2}
+  m_sharedMaterial: {fileID: 1132170062828959344, guid: 100fbd0ac64930447b0ee568260b1ee2,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

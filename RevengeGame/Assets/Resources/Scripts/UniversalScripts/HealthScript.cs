@@ -49,10 +49,9 @@ public class HealthScript : MonoBehaviour
     public void ApplyDamage(float damage, bool knockDown)
     {
         bool isCrit = false;
-        if (characterDied)
+        if (characterDied && is_Player)
         {
-            LevelTransitions lvlScript = GameObject.Find("InGameUI").GetComponent<LevelTransitions>();
-            StartCoroutine(lvlScript.FadeOut("LoseScreen"));
+            
         }
         else
         {
@@ -82,7 +81,8 @@ public class HealthScript : MonoBehaviour
 
             if (is_Player)
             {
-
+                LevelTransitions lvlScript = GameObject.Find("InGameUI").GetComponent<LevelTransitions>();
+                if (!lvlScript.transitioning) { StartCoroutine(lvlScript.FadeOut("LoseScreen")); }
             }
             else
             {

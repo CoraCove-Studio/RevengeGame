@@ -121,14 +121,17 @@ public class Dialogue : MonoBehaviour
             {
                 switch (currentLevel)
                 {
+                    case "Win_Cutscene":
+                        if (!lvlScript.transitioning) { StartCoroutine(lvlScript.FadeOut("Credits")); }
+                        break;
                     case "LevelThree_Cutscene":
-                        StartCoroutine(lvlScript.FadeOut("LevelThree"));
+                        if (!lvlScript.transitioning) { StartCoroutine(lvlScript.FadeOut("LevelThree")); }
                         break;
                     case "LevelTwo_Cutscene":
-                        StartCoroutine(lvlScript.FadeOut("LevelTwo"));
+                        if (!lvlScript.transitioning) { StartCoroutine(lvlScript.FadeOut("LevelTwo")); }
                         break;
                     case "LevelOne_Cutscene":
-                        StartCoroutine(lvlScript.FadeOut("LevelOne"));
+                        if (!lvlScript.transitioning) { StartCoroutine(lvlScript.FadeOut("LevelOne")); }
                         break;
                     default:
                         break;
